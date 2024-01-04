@@ -16,6 +16,12 @@
     display: none;
 }
 
+@media (max-width: 1024px) {
+    .links {
+        gap: 5px;
+    }
+}
+
 @media (max-width: 768px) {
     .links {
         display: none;
