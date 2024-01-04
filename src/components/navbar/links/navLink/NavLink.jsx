@@ -12,6 +12,7 @@ const NavLink = ({item}) => {
             href={item.path} 
             className={`${styles.container} ${
                 pathName===item.path && styles.active}`}
+                onClick={() => setOpen(prev => !prev)}
         >
             {item.title}
         </Link>
