@@ -1,0 +1,18 @@
+.links {
+    width: 100%;
+    padding-bottom: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #524cf9;
+    font-size: 1.2em;
+}
+
+.links a:hover {
+    color: var(--text);
+}

@@ -1,0 +1,13 @@
+.footer {
+    background-color: var(--bgFooter);
+    height: 80px;
+    padding: 10px 50px 0px 50px;
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    text-align: center;
+}
+
+.footer small {
+    color: var(--textSmall);
+}

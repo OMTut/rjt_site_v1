@@ -1,8 +1,10 @@
 :root {
     --bg: #0d0c22;
     --bgSoft: #2d2b42;
+    --bgFooter: #05021e;
     --text: white;
     --textSoft: #e5e5e5;
+    --textSmall: #7c7c7d;
     --btn: #3673fd;
     --menuBorder: #9b9b9b;
 }
@@ -28,10 +30,14 @@ a {
     margin: auto;
     padding-left: 50px;
     padding-right: 50px;
-    min-height: 100vh;
+    min-height: calc(100vh - 80px);
     display:flex;
     flex-direction: column;
     justify-content: space-between; 
+}
+
+.small {
+    color: var(--textSmall);
 }
 
 @media (max-width: 1536px) {
