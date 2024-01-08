@@ -1,0 +1,25 @@
+.homeContainer {
+  display: flex;
+  height: calc(100vh - 180px);
+  align-items:center;
+  
+} 
+
+.leftContainer {
+  flex: 2;
+}
+
+.rightContainer {
+  flex: 1;
+}
+
+.blogSummary {
+  padding-bottom: 1rem;
+}
+
+.blogSummary h2 {
+  font-size: 1.3rem;
+
+  margin-bottom: 0.5rem;
+}
+

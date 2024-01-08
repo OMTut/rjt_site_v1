@@ -1,9 +1,10 @@
-import { Inter } from 'next/font/google'
+import { Prompt } from 'next/font/google'
 import './globals.css'
 import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/footer/Footer'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Prompt({ subsets: ['latin'], 
+                        weight: ['100','200','300'], })
 
 export const metadata = {
   title: 'RJTuttle.com',
