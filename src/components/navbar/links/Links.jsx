@@ -11,7 +11,7 @@ const links = [
     },
     {
         title: 'Resume',
-        path: '/resume',
+        path: '/docs/resume_Tuttle.pdf',
     },
     {
         title: 'Projects',
