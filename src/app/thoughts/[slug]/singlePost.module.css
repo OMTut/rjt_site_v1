@@ -1,0 +1,38 @@
+.singlePostPageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    padding: 1rem 4rem 1rem 4rem;
+    max-width: 1200px;
+    clear: both;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.date{
+    margin-bottom: 1rem;
+}
+
+.img {
+
+    width: 250px;
+    float: left;
+    
+}
+
+.content p {
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .singlePostPageContainer {
+        padding: 1rem 1rem 1rem 1rem;
+    }
+}

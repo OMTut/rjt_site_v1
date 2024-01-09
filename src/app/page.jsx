@@ -1,3 +1,4 @@
+import PostCard from '@/components/postCard/postCard';
 import styles from './home.module.css';
 
 const Home = () => {
@@ -8,19 +9,12 @@ const Home = () => {
           <p>This site is currently under construction. Forgive the jankiness.</p>
         </div>
         <div className={styles.rightContainer}>
+          <h1>Dreams & Diatribes</h1>
           <div className={styles.blogSummary}>
-            <h1>Dreams & Diatribes</h1>
-            <h2>Blog</h2>
-            <p>Coming soon...</p>
+            <PostCard/>  
           </div>
-          <div className={styles.blogSummary}>
-            <h2>Blog</h2>
-            <p>Coming soon...</p>
-          </div>
-          <div className={styles.blogSummary}>
-            <h2>Blog</h2>
-            <p>Coming soon...</p>
-          </div>
+          
+        
         </div>
       </div>
     );

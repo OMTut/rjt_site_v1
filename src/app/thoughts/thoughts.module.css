@@ -1,0 +1,23 @@
+.thoughtsContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 1rem;
+    max-width: 1200px;
+}
+
+.thoughtsTitle {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 2rem;
+}
+
+.thoughtsSubtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 4rem;
+    text-align:center;
+}

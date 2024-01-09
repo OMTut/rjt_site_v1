@@ -1,7 +1,8 @@
+import Footer from "@/components/footer/Footer"
+
 const ThoughtsLayout = ({ children }) => {
     return (
         <div>
-            <div>Thoughts Layout</div>
             <div>{children}</div>
         </div>
     )
