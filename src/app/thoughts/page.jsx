@@ -13,7 +13,10 @@ import { getPosts } from "@/lib/data";
 
 const ThoughtsPage = async () => {
   //const posts = await getData() //retrieve data from api
+  //const posts = await getData()
+  
   const posts = await getPosts()
+
   return (
     <div className= {styles.thoughtsContainer}>
       <h1 className={styles.thoughtsTitle}>Dreams & Diatribes</h1>

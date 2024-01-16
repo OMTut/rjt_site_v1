@@ -24,9 +24,9 @@ const SinglePostPage = async ({params}) => {
             <div className={styles.imgContainer}></div>
             <div className={styles.postContainer}>
                 <h1 className={styles.title}>{post?.title}</h1>
-                <div className={styles.date}>01-09-2024</div>
+                <div className={styles.date}>{post?.date}</div>
                 <div className={styles.content}>
-                    {post?.body}
+                    {post?.content}
                 </div>
             </div>
         </div>
