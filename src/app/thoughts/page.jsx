@@ -1,16 +1,19 @@
 import styles from "./thoughts.module.css"
 import PostCard from "@/components/postCard/postCard";
+import { getPosts } from "@/lib/data";
 
-const getData = async () => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
-  if (!res.ok) { 
-    throw new Error("something went wrong")
-  }
-  return res.json()
-}
+// Fetch Data using an API
+// const getData = async () => {
+//   const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+//   if (!res.ok) { 
+//     throw new Error("something went wrong")
+//   }
+//   return res.json()
+// }
 
 const ThoughtsPage = async () => {
-  const posts = await getData() //retrieve data from api
+  //const posts = await getData() //retrieve data from api
+  const posts = await getPosts()
   return (
     <div className= {styles.thoughtsContainer}>
       <h1 className={styles.thoughtsTitle}>Dreams & Diatribes</h1>
