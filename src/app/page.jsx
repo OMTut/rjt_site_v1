@@ -1,7 +1,16 @@
 import PostCard from '@/components/postCard/postCard';
 import styles from './home.module.css';
 
-const Home = () => {
+const getData = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts')
+  if (!res.ok) { 
+    throw new Error("something went wrong")
+  }
+  return res.json()
+}
+
+const Home = async () => {
+  const posts = await getData() //retrieve data from api
     return (
       <div className={styles.homeContainer}>
         <div className={styles.leftContainer}>
@@ -10,11 +19,13 @@ const Home = () => {
         </div>
         <div className={styles.rightContainer}>
           <h1>Dreams & Diatribes</h1>
-          <div className={styles.blogSummary}>
-            <PostCard/>  
-          </div>
-          
-        
+          {
+            posts.slice(0,1).map(post=>(
+              <div className={styles.blogSummary} key={post.id}>
+                <PostCard post={post}/>
+              </div>
+            ))
+          }
         </div>
       </div>
     );
