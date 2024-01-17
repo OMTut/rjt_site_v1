@@ -10,9 +10,15 @@ const PostCard = ({post}) => {
             </div>
             <h1 className={styles.title}>{post.title}</h1>
             <div className={styles.date}>
-                {typeof post.date === 'object' ? JSON.stringify(post.date) : post.date}</div>
+                {post?.date?.toLocaleDateString(undefined, {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })
+                }
+            </div>
             <div className={styles.content}>
-                <p>{ typeof post.content === 'object' ? JSON.stringify(post.content) : post.content}</p>
+                <p>{ post.content}</p>
                 <Link className={styles.readMore} href={`/thoughts/${post.id}`}>READ MORE</Link>
             </div>
         </div>

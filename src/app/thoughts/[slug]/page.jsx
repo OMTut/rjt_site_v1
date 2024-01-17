@@ -19,12 +19,25 @@ const SinglePostPage = async ({params}) => {
     //Fetch data without an API
     const post = await getPost(slug)
 
+    if(!post) {
+        return <div>Not Found</div>
+    }
+
     return (
+        
         <div className={styles.singlePostPageContainer}>
             <div className={styles.imgContainer}></div>
             <div className={styles.postContainer}>
-                <h1 className={styles.title}>{post?.title}</h1>
-                <div className={styles.date}>{post?.date}</div>
+                <h1 className={styles.title}>
+                    {post?.title}
+                </h1>
+                <div className={styles.date}>
+                    {post?.date?.toLocaleDateString(undefined, {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })}
+                </div>
                 <div className={styles.content}>
                     {post?.content}
                 </div>
