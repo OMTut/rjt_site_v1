@@ -15,7 +15,9 @@ const executeQuery = async (query, params = []) => {
         throw new Error('Failed to execute query');
     }
 }
-
+/*****************************
+ * Gets all posts
+ */
 export const getAllPosts = async () => {
     return executeQuery('SELECT * FROM posts ORDER BY post_id DESC LIMIT 2');
 }
