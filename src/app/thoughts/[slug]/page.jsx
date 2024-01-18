@@ -29,17 +29,17 @@ const SinglePostPage = async ({params}) => {
             <div className={styles.imgContainer}></div>
             <div className={styles.postContainer}>
                 <h1 className={styles.title}>
-                    {post?.title}
+                    {post?.post_title}
                 </h1>
                 <div className={styles.date}>
-                    {post?.date?.toLocaleDateString(undefined, {
+                    {post?.post_date?.toLocaleDateString(undefined, {
                         year: 'numeric',
                         month: 'long',
                         day: 'numeric'
                     })}
                 </div>
                 <div className={styles.content}>
-                    {post?.content}
+                    {post?.post_content}
                 </div>
             </div>
         </div>

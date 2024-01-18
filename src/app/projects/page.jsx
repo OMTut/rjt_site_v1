@@ -1,9 +1,25 @@
-const ProjectsPage = () => {
-    return (
-      <div>
-        <h1>ProjectsPage</h1>
-      </div>
-    );
-  }
+import styles from "@/app/thoughts/thoughts.module.css"
+import PostCard from "@/components/postCard/postCard";
+import { getPosts } from "@/lib/data";
+
+const ProjectsPage = async () => {
   
-  export default ProjectsPage;
+  const posts = await getPosts(2)
+
+  return (
+    <div className= {styles.thoughtsContainer}>
+      <h1 className={styles.thoughtsTitle}>Projects</h1>
+      <h2 className={styles.thoughtsSubtitle}>A collection of things I find interesting.</h2>
+        {
+          posts.map(post=>(
+            <div className={styles.post} key={post.post_id}>
+              <PostCard post={post}/>
+            </div>
+          ))
+        }
+        
+    </div>
+  );
+}
+  
+export default ProjectsPage;
