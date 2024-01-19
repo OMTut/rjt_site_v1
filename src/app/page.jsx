@@ -8,7 +8,7 @@ const Home = async () => {
     return (
       <div className={styles.homeContainer}>
         <div className={styles.leftContainer}>
-          <h1>In Development</h1>
+          <h1>Software Engineer & Former Bard</h1>
           <p>This site is currently under construction. Forgive the jankiness.</p>
         </div>
         <div className={styles.rightContainer}>

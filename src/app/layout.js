@@ -7,7 +7,7 @@ const inter = Prompt({ subsets: ['latin'],
                         weight: ['100','200','300'], })
 
 export const metadata = {
-  title: 'RJTuttle.com',
+  title: 'RJTuttle.com - Software Engineer & Former Bard',
   description: 'Developer of Projects, Dreams, & Diatribes',
 }
 
