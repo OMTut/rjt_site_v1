@@ -13,7 +13,7 @@ const ThoughtsPage = async () => {
         {
           posts.map(post=>(
             <div className={styles.post} key={post.post_id}>
-              <PostCard post={post}/>
+              <PostCard post={post} postType="thoughts"/>
             </div>
           ))
         }

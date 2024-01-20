@@ -2,6 +2,14 @@ import styles from "@/app/thoughts/thoughts.module.css"
 import PostCard from "@/components/postCard/postCard";
 import { getPosts } from "@/lib/data";
 
+export const metadata = {
+  title: {
+    default: 'Projects',
+    template: '%s - RJTuttle.com'
+  },
+  description: 'Software Development & Engineering Projects Page',
+};
+
 const ProjectsPage = async () => {
   
   const posts = await getPosts(2)
@@ -13,7 +21,7 @@ const ProjectsPage = async () => {
         {
           posts.map(post=>(
             <div className={styles.post} key={post.post_id}>
-              <PostCard post={post}/>
+              <PostCard post={post} postType="projects"/>
             </div>
           ))
         }

@@ -1,10 +1,11 @@
 const pool = require('./utils')
-
+import { unstable_noStore as noStore } from 'next/cache'; //unstable exmple
 
 /*****************************
  * Generic function to handle queries
  */
 const executeQuery = async (query, params = []) => {
+    noStore(); 
     try {
         console.log(`Running query: ${query} with params: ${params}`);
         const res = await pool.query(query, params);

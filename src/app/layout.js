@@ -7,9 +7,12 @@ const inter = Prompt({ subsets: ['latin'],
                         weight: ['100','200','300'], })
 
 export const metadata = {
-  title: 'RJTuttle.com - Software Engineer & Former Bard',
+  title: {
+    default: 'RJTuttle.com - Software Engineer & Former Bard',
+    template: '%s - RJTuttle.com'
+  },
   description: 'Developer of Projects, Dreams, & Diatribes',
-}
+};
 
 export default function RootLayout({ children }) {
   return (

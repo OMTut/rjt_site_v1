@@ -1,4 +1,10 @@
 import styles from "./inquire.module.css"
+
+export const metadata = {
+  title: 'Inquire - Software Engineer',
+  description: 'Contact Page for developer',
+}
+
 const InquirePage = () => {
     return (
       <div className={styles.inquireContainer}>

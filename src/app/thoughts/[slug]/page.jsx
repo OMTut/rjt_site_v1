@@ -1,6 +1,21 @@
+/****************************************************
+ * Note: This is making 2 fetch calls, but in Next.js, it only makes
+ * the first one. Interesting.
+ */
 import Image from 'next/image';
 import styles from './singlePost.module.css'
 import { getPost } from '@/lib/data';
+
+export const generateMetadata = async({params}) => {
+    const { slug } = params
+
+    //fetch data
+    const post = await getPost(slug)
+    return {
+        title: post.post_title,
+        description: post.post_summary
+    }
+  };
 
 // Fetch data with an API
 // const getData = async (slug) => {
