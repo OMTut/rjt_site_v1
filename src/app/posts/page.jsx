@@ -1,9 +1,8 @@
-import styles from "@/app/thoughts/thoughts.module.css"
-import PostCard from "@/components/postCard/postCard";
-import { getPosts } from "@/lib/data";
 
+
+//api call
 const getData = async () => {
-  const res = await fetch('http://localhost:3000/api/projects', {next:{revalidate:3600}})
+  const res = await fetch('https://localhost:3000/api/posts', {next:{revalidate:3600}})
   
   if (!res.ok) {
     throw new Error("Something went wrong")
@@ -11,18 +10,14 @@ const getData = async () => {
   return res.json();
 }
 
-export const metadata = {
-  title: {
-    default: 'Projects',
-    template: '%s - RJTuttle.com'
-  },
-  description: 'Software Development & Engineering Projects Page',
-};
-
 const ProjectsPage = async () => {
   
-  //const posts = await getPosts("projects")
-  const posts = await getData();
+  
+    //get Data with an api call
+    const posts = await getData();
+
+    //Get Data witout an api
+    //const posts = await getPosts("projects")
 
   return (
     <div className= {styles.thoughtsContainer}>

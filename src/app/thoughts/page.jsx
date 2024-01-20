@@ -1,10 +1,18 @@
 import styles from "./thoughts.module.css"
 import PostCard from "@/components/postCard/postCard";
-import { getPosts } from "@/lib/data";
+
+//Gets data from the api route
+const getData = async () => {
+  const res = await fetch('http://localhost:3000/api/thoughts', {next:{revalidate:3600}})
+  if (!res.ok) {
+    throw new Error("Something went wrong")
+  }
+  return res.json();
+}
 
 const ThoughtsPage = async () => {
   
-  const posts = await getPosts("thoughts")
+  const posts = await getData();
 
   return (
     <div className= {styles.thoughtsContainer}>

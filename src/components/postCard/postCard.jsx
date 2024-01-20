@@ -11,12 +11,11 @@ const PostCard = ({post, postType}) => {
             <div className={styles.textCon}>
                 <h1 className={styles.title}>{post.post_title}</h1>
                 <div className={styles.date}>
-                    {post?.created_on?.toLocaleDateString(undefined, {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric'
-                        })
-                    }
+                    {new Date(post?.created_on)?.toLocaleDateString(undefined, {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                    })}
                 </div>
                 <div className={styles.content}>
                     <p>{ post.post_summary}</p>
