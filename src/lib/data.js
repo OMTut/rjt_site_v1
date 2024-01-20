@@ -34,7 +34,7 @@ export const getPosts = async (category_id) => {
  * Get a single post by id
  * params: post_id
  */
-export const getPost = async (post_id) => {
-    const rows = await executeQuery('SELECT * FROM posts WHERE post_id = $1', [post_id]);
+export const getPost = async (slug) => {
+    const rows = await executeQuery('SELECT * FROM posts WHERE slug = $1', [slug]);
     return rows[0];
 }

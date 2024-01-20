@@ -20,7 +20,7 @@ const PostCard = ({post}) => {
                 </div>
                 <div className={styles.content}>
                     <p>{ post.post_summary}</p>
-                    <Link className={styles.readMore} href={`/thoughts/${post.post_id}`}>READ MORE</Link>
+                    <Link className={styles.readMore} href={`/thoughts/${post.slug}`}>READ MORE</Link>
                 </div>
             </div>
         </div>
