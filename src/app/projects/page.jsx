@@ -12,7 +12,7 @@ export const metadata = {
 
 const ProjectsPage = async () => {
   
-  const posts = await getPosts(2)
+  const posts = await getPosts("projects")
 
   return (
     <div className= {styles.thoughtsContainer}>

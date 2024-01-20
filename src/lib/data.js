@@ -27,8 +27,8 @@ export const getAllPosts = async () => {
  * Gets all posts from the Category
  * params: category_id
  */
-export const getPosts = async (category_id) => {
-    return executeQuery('SELECT * FROM posts WHERE category_id = $1 ORDER BY post_id DESC', [category_id]);
+export const getPosts = async (category_name) => {
+    return executeQuery('SELECT * FROM posts WHERE category_name = $1 ORDER BY post_id DESC', [category_name]);
 }
 
 /******************************

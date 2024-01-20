@@ -28,12 +28,9 @@ export const generateMetadata = async({params}) => {
 
 const SinglePostPage = async ({params}) => {
     const {slug} = params
-    //Fetch data with an API 
-    //const post = await getData(slug)
     
     //Fetch data without an API
     const post = await getPost(slug)
-
     if(!post) {
         return <div>Not Found</div>
     }

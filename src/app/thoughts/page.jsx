@@ -4,7 +4,7 @@ import { getPosts } from "@/lib/data";
 
 const ThoughtsPage = async () => {
   
-  const posts = await getPosts(1)
+  const posts = await getPosts("thoughts")
 
   return (
     <div className= {styles.thoughtsContainer}>
