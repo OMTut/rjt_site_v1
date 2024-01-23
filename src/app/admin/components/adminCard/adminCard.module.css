@@ -1,0 +1,4 @@
+.adminCardContainer {
+    display:flex;
+    flex-direction: row;
+}
