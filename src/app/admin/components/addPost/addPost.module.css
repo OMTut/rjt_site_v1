@@ -19,6 +19,9 @@
 }
 
 .button{
+   width: 10rem;
+   height: 3rem;
+   font-size: 1.25rem;
    padding: 5px 10px;
    border-radius: 5px;
    color: var(--text);
@@ -28,6 +31,10 @@
  
  .view{
    background-color: teal;
+ }
+ 
+ .view:hover{
+   background-color: #043939;
  }
 
 @media (max-width: 600px) {
