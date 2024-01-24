@@ -1,3 +1,4 @@
+"use client";
 import styles from "./projects.module.css"
 import Link from "next/link"
 import Pagination from "../components/pagination/pagination"
@@ -12,15 +13,15 @@ const getData = async () => {
   return res.json();
 }
 
-export const metadata = {
-  title: {
-    default: 'Projects',
-    template: '%s - RJTuttle.com'
-  },
-  description: 'Software Development & Engineering Projects Page',
-};
+// export const metadata = {
+//   title: {
+//     default: 'Projects',
+//     template: '%s - RJTuttle.com'
+//   },
+//   description: 'Software Development & Engineering Projects Page',
+// };
 
-const ProjectsPage = async (post, postType) => {
+const ProjectsPage = async () => {
   
   //const posts = await getPosts("projects")
   const posts = await getData();
@@ -30,7 +31,7 @@ const ProjectsPage = async (post, postType) => {
     <div className= {styles.container}>
          <div className={styles.top}>
         {/*<Search placeholder="Search for a user..." />*/}
-        <Link href="/admin/projects/add">
+        <Link href={{pathname: '/admin/addNew', query: {categoryName: 'project'} }}  >
           <button className={styles.addButton}>Add New</button>
         </Link>
       </div>

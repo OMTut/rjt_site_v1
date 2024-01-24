@@ -1,0 +1,37 @@
+.container {
+   display: flex;
+   flex-direction: column;
+   width: 100%;
+
+   margin: 0 auto;
+}
+
+.container form {
+   display: flex;
+   flex-direction: column;
+}
+
+.container select,
+.container input {
+   margin-bottom: 10px;
+   padding: 10px;
+   font-size: 16px;
+}
+
+.button{
+   padding: 5px 10px;
+   border-radius: 5px;
+   color: var(--text);
+   border: none;
+   cursor: pointer;
+ }
+ 
+ .view{
+   background-color: teal;
+ }
+
+@media (max-width: 600px) {
+   .container {
+       padding: 0 20px;
+   }
+}

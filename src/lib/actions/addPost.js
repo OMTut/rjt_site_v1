@@ -1,3 +1,4 @@
+"use server";
 /**********************************************
  * If using server functions, the function has to be async
  */
@@ -13,7 +14,7 @@ const pool = require('./../utils');
 // }
 
 export const addPost = async (formData) => {
-    "use server";
+  
 
     const {
         title, category, content, summary
