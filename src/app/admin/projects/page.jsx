@@ -31,7 +31,7 @@ const ProjectsPage = async () => {
     <div className= {styles.container}>
          <div className={styles.top}>
         {/*<Search placeholder="Search for a user..." />*/}
-        <Link href={{pathname: '/admin/addNew', query: {categoryName: 'project'} }}  >
+        <Link href={{pathname: '/admin/addNew', query: {categoryName: 'Project'} }}  >
           <button className={styles.addButton}>Add New</button>
         </Link>
       </div>
