@@ -28,7 +28,7 @@ const ProjectsPage = async () => {
   const count = posts.length;
 
   return (
-    <div className= {styles.container}>
+    <div className= {styles['addnew-container']}>
          <div className={styles.top}>
         {/*<Search placeholder="Search for a user..." />*/}
         <Link href={{pathname: '/admin/addNew', query: {categoryName: 'Project'} }}  >

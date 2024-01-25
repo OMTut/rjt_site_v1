@@ -5,14 +5,15 @@ import styles from "./admin.module.css"
 
 const Layout = ({children}) => {
   return (
-    <div className={styles.container}>
-      <div className={styles.menu}>
+    <div className={styles['container-admin']}>
+      <div className={styles['menu']}>
         <Sidebar/>
       </div>
-      <div className={styles.content}>
+      <div className={styles['content']}>
         <Navbar/>
-        {children}
-        {/*<Footer/>*/}
+        <div className={styles['main-admin']}>
+          {children}
+        </div>
       </div>
     </div>
   )

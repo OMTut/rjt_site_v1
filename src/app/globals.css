@@ -40,6 +40,12 @@ a {
     color: var(--textSmall);
 }
 
+.ck.ck-editor__editable {
+    background-color: white;
+    color: black;
+    font-size: 1.2em;
+}
+
 @media (max-width: 1536px) {
     .container {
         width: 1366px;

@@ -46,7 +46,7 @@ const Sidebar = async () => {
   //const { user } = await auth();
 
   return (
-    <div className={styles.container}>
+    <div className={styles['container-sidebar']}>
       <div className={styles.user}>
         <div className={styles.userDetail}>
           <span className={styles.username}>{/*{user.username}*/}</span>

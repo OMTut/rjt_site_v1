@@ -1,22 +1,25 @@
-.container {
+.addpost-container {
    display: flex;
    flex-direction: column;
    width: 100%;
 
-   margin: 0 auto;
+
+    border-radius: 10px;
+    background-color: #352f3c;
 }
 
-.container form {
+.addpost-container form {
    display: flex;
    flex-direction: column;
 }
 
-.container select,
-.container input {
+.addpost-container select,
+.addpost-container input {
    margin-bottom: 10px;
    padding: 10px;
-   font-size: 16px;
-   background-color:#cbd7e5;
+   font-size: 1.2em;
+   background-color:white;
+   color:black;
 }
 
 .inputTitle {
@@ -28,6 +31,7 @@
    width: 10rem;
    height: 3rem;
    font-size: 1.25rem;
+   margin-top:1em;
    padding: 5px 10px;
    border-radius: 5px;
    color: var(--text);
