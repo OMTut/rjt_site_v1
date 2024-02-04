@@ -1,4 +1,5 @@
 "use client";
+import { useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./navbar.module.css";
 import {
@@ -6,9 +7,14 @@ import {
   MdOutlineChat,
   MdPublic,
   MdSearch,
+  MdLogout,
 } from "react-icons/md";
+import { handleLogout } from "@/lib/actions/logout";
 
-const Navbar = () => {
+const Navbar = ({session}) => {
+  //useState hook
+  const [open,setOpen] = useState(false)
+
   const pathname = usePathname();
 
   return (
@@ -23,6 +29,26 @@ const Navbar = () => {
           <MdOutlineChat size={20} />
           <MdNotifications size={20} />
           <MdPublic size={20} />
+          
+          {
+                    session?.user ? (
+                        <>
+                        {
+                          session.user?.isAdmin && (
+                            //something will go here.
+                            "Logged In as Admin"
+                            )
+                        }
+                        <form action={ handleLogout }>
+                        
+                          <button className={styles.logout}><MdLogout size={20} /></button>
+                        </form>
+                        </>
+                    ) : (
+                        //the login stuff went here.
+                        "NotLoggedIn"
+                    )
+                }
         </div>
       </div>
     </div>

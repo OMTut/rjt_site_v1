@@ -1,5 +1,6 @@
 import { Prompt } from 'next/font/google'
 import './globals.css'
+import { auth } from "@/lib/auth"
 import Navbar from '@/components/navbar/Navbar'
 import Footer from '@/components/footer/Footer'
 
@@ -13,6 +14,8 @@ export const metadata = {
   },
   description: 'Developer of Projects, Dreams, & Diatribes',
 };
+
+const session = await auth();
 
 export default function RootLayout({ children }) {
   return (

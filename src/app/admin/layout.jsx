@@ -1,7 +1,10 @@
 import Navbar from "./components/navbar/navbar"
 import Sidebar from "./components/sidebar/sidebar"
 import styles from "./admin.module.css"
+import { auth } from "@/lib/auth"
 // import Footer from "../ui/dashboard/footer/footer"
+
+const session = await auth();
 
 const Layout = ({children}) => {
   return (
@@ -10,7 +13,7 @@ const Layout = ({children}) => {
         <Sidebar/>
       </div>
       <div className={styles['content']}>
-        <Navbar/>
+        <Navbar session={session}/>
         <div className={styles['main-admin']}>
           {children}
         </div>

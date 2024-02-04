@@ -38,3 +38,14 @@
     display: flex;
     gap: 20px;
   }
+
+  .icons :hover {
+    cursor: pointer;
+    color: #ff0000;
+  }
+
+  .logout {
+    color: white;
+    background-color: transparent;
+    border:0;
+  }
